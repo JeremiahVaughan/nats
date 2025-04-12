@@ -1,0 +1,13 @@
+[Unit]
+Description=nats
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/piegarden/nats/app
+
+Restart=on-failure
+User=root
+
+[Install]
+WantedBy=multi-user.target
