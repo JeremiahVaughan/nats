@@ -1,4 +1,6 @@
-sudo cp $HOME/nats/nats.service /etc/systemd/system/nats.service
-sudo systemctl enable nats.service
-sudo systemctl start nats.service
-sudo systemctl restart nats.service
+#!/bin/bash
+set -e
+sudo cp "${HOME}/deploy/${APP}/${APP}.service" "/etc/systemd/system/${APP}.service"
+sudo systemctl enable "${APP}.service"
+sudo systemctl start "${APP}.service"
+sudo systemctl restart "${APP}.service"

@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/home/piegarden/nats/app
+ExecStart=/home/piegarden/deploy/nats/nats
 
 Restart=on-failure
 User=root
